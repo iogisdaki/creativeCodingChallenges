@@ -1,4 +1,4 @@
-int order = 2;
+int order = 5;
 int N = int(pow(2, order)); // subdivisions along the width/height of the canvas
 int numberOfPoints = N * N;
 PVector[] path = new PVector[numberOfPoints];
@@ -12,35 +12,45 @@ PVector hilbert(int i) {
     new PVector(1, 1),
     new PVector(1, 0)
   };
-  
+
   // extract the lowest 2 bits
-  // the small square's orientation at the lowest level.
-  int index = i & 3;  
+  // the smallest square's orientation at the lowest len -.
+  int index = i & 3;
   PVector v = points[index];
 
-  // extract the previous two bits
-  // this represents the quadrant of the canvas the point is in
-  i = i >>>  2; 
-  index = i & 3;
-
-  // translate and rotate according to the quadrant
-  // the order the line is drawn is always points 0,1,2,3
-  if (index == 0){
-    // upper left quardrant
-    // 90-degree rotation along the diagonal line x = y 
-    float temp = v.x;
-    v.x = v.y;
-    v.y = temp;
-  } else if (index == 1){
-    // bottom left quardrant
-    v.y += order;
-  } else if (index == 2){
-    // bottom right quardrant
-    v.x += order;
-    v.y += order;
-  } else if (index == 3){
-    // upper right quardrant
-    v.x += order;
+  for (int level = 1; level < order; level++) {
+    // extract the previous two bits
+    // determines which quadrant of the next larger scale we're in according to the level
+    i = i >>>  2;
+    index = i & 3;
+    // length of side of the quadrant at the current recursion level
+    // used in rotation and translation
+    float len = pow(2, level);
+    // translate and rotate according to the quadrant
+    // the order the line is drawn is always points 0,1,2,3
+    if (index == 0) {
+      // upper left quardrant
+      // 90-degree rotation along the diagonal line x = y
+      float temp = v.x;
+      v.x = v.y;
+      v.y = temp;
+    } else if (index == 1) {
+      // bottom left quardrant
+      // translate down(upper left corner is 0,0)
+      v.y += len;
+    } else if (index == 2) {
+      // bottom right quardrant
+      // translate right  and down
+      v.x += len;
+      v.y += len;
+    } else if (index == 3) {
+      // upper right quardrant
+      float temp = len - 1 - v.x;
+      v.x = len - 1 - v.y;
+      v.y = temp;
+      // translate right
+      v.x += len;
+    }
   }
   return v;
 }
@@ -64,8 +74,9 @@ void draw() {
   strokeWeight(2);
   noFill();
   beginShape();
-  for (int i = 0; i < path.length; i++) {
+  for (int i = 0; i < counter; i++) { // draw it gradually as draw is recalled
     vertex(path[i].x, path[i].y);
   }
   endShape();
+  counter = (counter < path.length) ? counter+1 : counter;
 }
