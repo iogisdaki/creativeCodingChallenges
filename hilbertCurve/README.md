@@ -4,9 +4,10 @@ The Hilbert curve is a space filling fractal, meaning it's a continuous line tha
 
 Here's a preview at different levels of iteration:
 
-**Iteration level: 6**  
-(https://github.com/user-attachments/assets/95733b80-d676-4392-b070-41be7de798a6)
+**Iteration level: 6**
+<video src="https://github.com/user-attachments/assets/95733b80-d676-4392-b070-41be7de798a6"></video>
 
-**Iteration level: 10 (Image)**  
-![Hilbert Curve Order 10](./imgs/order10.png)
-
+**Iteration level: 10**
+<div>
+  <img src="./imgs/order10.png" width="500" />
+</div>
