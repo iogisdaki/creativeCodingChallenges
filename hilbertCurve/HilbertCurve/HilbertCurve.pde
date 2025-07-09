@@ -1,4 +1,4 @@
-int order = 5;
+int order = 6;
 int N = int(pow(2, order)); // subdivisions along the width/height of the canvas
 int numberOfPoints = N * N;
 PVector[] path = new PVector[numberOfPoints];
@@ -57,6 +57,7 @@ PVector hilbert(int i) {
 
 void setup() {
   size(1024, 1024);
+  colorMode(HSB, 360, 255, 255);
   background(0);
 
   for (int i = 0; i < numberOfPoints; i++) {
@@ -74,8 +75,10 @@ void draw() {
   strokeWeight(2);
   noFill();
   beginShape();
-  for (int i = 0; i < counter; i++) { // draw it gradually as draw is recalled
-    vertex(path[i].x, path[i].y);
+  for (int i = 1; i < counter; i++) { // draw it gradually as draw is recalled
+    float colour = map(i, 0, path.length, 0, 360);
+    stroke(colour, 255, 255);
+    line (path[i].x, path[i].y, path[i-1].x, path[i-1].y);
   }
   endShape();
   counter = (counter < path.length) ? counter+1 : counter;
