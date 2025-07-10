@@ -14,7 +14,7 @@ PVector hilbert(int i) {
   };
 
   // extract the lowest 2 bits
-  // the smallest square's orientation at the lowest len -.
+  // the smallest square's orientation at the lowest level
   int index = i & 3;
   PVector v = points[index];
 
