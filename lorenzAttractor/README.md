@@ -12,7 +12,7 @@ $$
 The Lorenz attractor is actually the origin of the term the butterfly effect. Lorenz discovered that if he ran a weather simulation twice with just the tiniest change in the starting value, the results would diverge dramatically over time. This led to the poetic idea that: "A butterfly flapping its wings in Brazil could set off a tornado in Texas."
 
 ## Bonus fun fact
-This pairs nicely with the fact that, when visualized, the Lorenz attractor actually resembles a butterfly! (well kinda)
+This pairs nicely with the fact that, when visualized, the Lorenz attractor actually resembles a butterfly! (well kinda anyway)
 
 ## About the program
 The view rotates but the viewer can move the camera around freely using the mouse. 
