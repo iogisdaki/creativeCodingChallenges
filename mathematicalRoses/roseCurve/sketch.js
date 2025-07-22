@@ -48,11 +48,11 @@ function draw() {
   noFill();
   strokeWeight(4);
   // the times you go around the circle depend on the denominator
-  for (let a = 0; a < TWO_PI * d; a += 0.02) {
+  for (let theta = 0; theta < TWO_PI * d; theta += 0.02) {
     // polar to cartesian coords
-    const radius = 200 * cos(k * a); // scale by 200 to appear bigger in the canvas
-    const x = radius * cos(a);
-    const y = radius * sin(a);
+    const radius = 200 * cos(k * theta); // scale by 200 to appear bigger in the canvas
+    const x = radius * cos(theta);
+    const y = radius * sin(theta);
     vertex(x, y);
   }
   endShape();

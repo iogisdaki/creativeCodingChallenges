@@ -18,3 +18,5 @@ Where:
 - a controls the size of the petals,
 - k affects the number of petals and is in irreducible form $k = ⁠n/d$,
 - $\theta$ is the angle in radians.
+
+The different types of flowers can be seen in this picture:
