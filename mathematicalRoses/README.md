@@ -23,3 +23,11 @@ The different types of flowers according to the values of n and d can be seen in
 <div>
   <img src="./imgs/roses.png" width="400" />
 </div>
+
+### The program
+The user can change the values of n and d through two sliders to recreate the roses of the photograph.
+
+A preview of the program can be seen here:
+<div>
+  <img src="./imgs/roses_preview.png" width="400" />
+</div>
