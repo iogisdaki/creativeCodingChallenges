@@ -19,4 +19,7 @@ Where:
 - k affects the number of petals and is in irreducible form $k = ⁠n/d$,
 - $\theta$ is the angle in radians.
 
-The different types of flowers can be seen in this picture:
+The different types of flowers according to the values of n and d can be seen in this picture:
+<div>
+  <img src="./imgs/roses.png" width="400" />
+</div>
