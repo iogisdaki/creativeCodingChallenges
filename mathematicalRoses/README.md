@@ -37,7 +37,7 @@ A preview of the program can be seen here:
 
 
 ### Maurer Rose
-A Maurer rose of the rose $r = sin(nθ)$ consists of the 360 lines successively connecting the above 361 points. Thus a Maurer rose is a polygonal curve with vertices on a rose.
+A Maurer rose of the rose $r = sin(nθ)$ consists of the 360 lines successively connecting the 361 points explained below. Thus a Maurer rose is a polygonal curve with vertices on a rose.
 
 Let $r = sin(nθ)$ be a rose in the polar coordinate system, where here we consider n a positive integer. So and mentioned above the rose has n petals if n is odd, and 2n petals if n is even.
 
