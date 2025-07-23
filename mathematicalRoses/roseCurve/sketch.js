@@ -39,14 +39,14 @@ function draw() {
   labelN.html(`n = ${n}`);
   labelD.html(`d = ${d}`);
 
-  background(51);
+  background(0);
   // the point of origin in p5 in top left so we translate to the center
   translate(width / 2, height / 2);
 
   beginShape();
   stroke(255);
   noFill();
-  strokeWeight(4);
+  strokeWeight(2);
   // the times you go around the circle depend on the denominator
   for (let theta = 0; theta < TWO_PI * d; theta += 0.02) {
     // polar to cartesian coords
