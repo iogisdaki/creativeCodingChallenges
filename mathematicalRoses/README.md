@@ -36,15 +36,18 @@ A preview of the program can be seen here:
 </div>
 
 
-
 ### Maurer Rose
-A Maurer rose of the rose r = sin(nθ) consists of the 360 lines successively connecting the above 361 points. Thus a Maurer rose is a polygonal curve with vertices on a rose.
+A Maurer rose of the rose $r = sin(nθ)$ consists of the 360 lines successively connecting the above 361 points. Thus a Maurer rose is a polygonal curve with vertices on a rose.
 
-Let r = sin(nθ) be a rose in the polar coordinate system, where here we consider n a positive integer. So and mentioned above the rose has n petals if n is odd, and 2n petals if n is even.
+Let $r = sin(nθ)$ be a rose in the polar coordinate system, where here we consider n a positive integer. So and mentioned above the rose has n petals if n is odd, and 2n petals if n is even.
 
 We then take 361 points on the rose:
 
+$$
+\begin{aligned}
 (sin(nk), k) (k = 0, d, 2d, 3d, ..., 360d),
+\end{aligned}
+$$
 
 where d is a positive integer and the angles are in **degrees**, not radians.
 
@@ -53,8 +56,8 @@ The Maurer rose uses the same points as the rose curve, but instead of drawing a
 You can think of it like tracing the rose shape with a string, connecting dots along the edge.
 
 Here are some Maurer rose shapes:
-<img src="./imgs/maurerRoses.png" width="400" />
 
+<img src="./imgs/maurerRoses.png" width="400" />
 
 ### The program
 Again the user can change the values of n and d through two sliders to create all kinds of pretty and majestic maurer roses, and can also check a box to choose whether to show the underlying basic rose curve.
